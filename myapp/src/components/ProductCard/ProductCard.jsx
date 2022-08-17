@@ -1,0 +1,42 @@
+import { useDispatch } from "react-redux";
+import "../ProductCard/ProductCard.css";
+
+import { Link } from "react-router-dom";
+import { cartActions } from "../../store/shoppingCart/cartSlice";
+
+
+const ProductCard = (props) => {
+  const { id, title, image01, price } = props.item;
+
+  const dispatch = useDispatch();
+  const addToCard = () => {
+    dispatch(cartActions.addItem({
+      id,
+      title,
+      image01,
+      price
+    }))
+
+  }
+  return (
+    <div className="product__item">
+      <div className="product__img">
+        <img src={image01} alt="product-img" className="w-50" />
+      </div>
+
+      <div className="product__content">
+        <h5>
+          <Link to={`/products/${id}`}>{title}</Link>
+        </h5>
+        <div className=" d-flex align-items-center justify-content-between ">
+          <span className="product__price">${price}</span>
+          <button className="addTOCart__btn" onClick={addToCard}>
+            <i class="ri-shopping-cart-line"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProductCard;

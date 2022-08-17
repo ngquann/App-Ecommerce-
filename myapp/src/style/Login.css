@@ -1,0 +1,147 @@
+.auth {
+    width: 850px;
+    height: 545px;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 22;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.3);
+    overflow-y: auto;
+    transition: all 0.35s ease-in-out;
+}
+
+.auth.open {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.auth--box {
+    position: relative;
+}
+
+.user-close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top:0;
+    right: 15px;
+    color: #221f20;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.auth__choose {
+    display: none;
+}
+
+.auth__login .auth__title, .auth__login .auth__description, .auth__register .auth__title, .auth__register .auth__description {
+    text-align: center;
+}
+
+.auth__block {
+    padding: 20px;
+}
+
+.auth__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0;
+    color: #221f20;
+}
+
+.auth__description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 0;
+    color: #6c6d70;
+}
+
+.auth__title + .auth__login__content {
+    margin-top: 10px;
+}
+
+.form-control {
+    border-radius: 4px;
+    height: 48px;
+}
+
+.auth__form {
+    margin-top: 20px;
+}
+
+.auth__form .form-group + .form-group {
+    margin-top: 24px;
+}
+
+.auth__login .auth__form__options {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth__login__content .form-checkbox label {
+    display: flex;
+    min-height: 20px;
+    align-items: center;
+}
+
+.auth__form__link {
+    color: #221f20;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: underline;
+}
+
+.auth__form__buttons {
+    margin-top: 29px;
+}
+
+.auth__form__buttons .btn {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.checkboxs {
+    border: 1px solid #faf9f9;
+    display: block;
+    width: 18px;
+    height: 18px;
+    appearance: auto;
+}
+.btn--large {
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #212245;
+    color: #f7f8f9;
+    border: 1px solid transparent;
+}
+
+.btn--face {
+    border-radius: 0;
+    background-color: #4267B2;
+    color: #fff;
+}
+
+.btn--gg {
+    border-radius: 0;
+    background-color: #DC5246;
+    color: #fff;
+}
+
+.btn--face i, .btn--gg i {
+    font-size: 20px;
+    text-align: center;
+    margin-right: 10px;
+}
